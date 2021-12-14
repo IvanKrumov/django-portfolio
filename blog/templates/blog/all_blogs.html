@@ -1,9 +1,16 @@
-<h1>This is my blog page - Under construction!!!!</h1>
+{% extends 'portfolio/base.html' %}
 
+{% block content %}
+
+<h1>This is my blog page. Here you can find information regarding the sources that I use in my Python journey.</h1>
+
+<h5>Ivan has written {{ blogs.count }} blog post{{ blogs.count|pluralize}}</h5>
 {% for blog in blogs %}
 
 <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 
-<h5>{{ blog.date }}</h5>
-<p>{{ blog.description }}</p>
+<h5>{{ blog.date|date:'M d Y' }}</h5>
+<p>{{ blog.description|striptags|truncatechars:100 }}</p>
 {% endfor %}
+
+{% endblock %}
