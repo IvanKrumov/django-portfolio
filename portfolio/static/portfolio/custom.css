@@ -14,9 +14,32 @@ body {
     font-size: 6rem;
 }
 
+.row { 
+    flex-direction: row;
+}
+
+.img-style {
+    min-height: 250px;
+    position: center;
+}
+
+.personal-pic {
+    max-height: 300px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+.top {
+    margin-top: 45px;
+}
+
 @media (min-width: 992px) {
     #hometext {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     #blogdetailtitle {
         font-size: 5rem;
